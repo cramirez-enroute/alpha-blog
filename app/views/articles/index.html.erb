@@ -16,19 +16,13 @@
         <td><%= article.title %></td>
         <td><%= article.description %></td>
         <td>
-          <%= button_to "", { action: "show", id: article.id, class: 'gc-button gc-icon-button' }, { method: :get } do %>
-            <i class="uil uil-eye"></i>
-          <% end %>
+          <%= button_to "Show", { action: "show", id: article.id }, { method: :get, class: 'gc-button gc-icon-button' } %>
         </td>
         <td>
-          <%= button_to "", { action: "destroy", id: article.id, class: 'gc-button gc-icon-button' }, method: :delete do %>
-            <i class="uil uil-trash-alt"></i>
-          <% end %>
+          <%= button_to "Delete", { action: "destroy", id: article.id }, { method: :delete, class: 'gc-button gc-icon-button' } %>
         </td>
         <td>
-          <%= button_to "", { action: "edit", id: article.id, class: 'gc-button gc-icon-button' }, { method: :get } do %>
-            <i class="uil uil-pen"></i>
-          <% end %>
+          <%= button_to "Edit", { action: "edit", id: article.id }, { method: :get, class: 'gc-button gc-icon-button' } %>
         </td>
       </tr>
     <% end %>
