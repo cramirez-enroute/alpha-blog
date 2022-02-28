@@ -1,0 +1,19 @@
+current directory: /Users/cristianramirez/Enroute/ruby-training/second/alpha-blog/vendor/bundle/ruby/3.1.0/gems/io-console-0.5.11/ext/io/console
+/Users/cristianramirez/.rvm/rubies/ruby-3.1.0/bin/ruby -I /Users/cristianramirez/.rvm/rubies/ruby-3.1.0/lib/ruby/3.1.0 -r ./siteconf20220228-71444-jwykjp.rb extconf.rb
+checking for termios.h... yes
+checking for cfmakeraw() in termios.h... yes
+checking for sys/ioctl.h... yes
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... yes
+creating Makefile
+
+current directory: /Users/cristianramirez/Enroute/ruby-training/second/alpha-blog/vendor/bundle/ruby/3.1.0/gems/io-console-0.5.11/ext/io/console
+make DESTDIR\= clean
+
+current directory: /Users/cristianramirez/Enroute/ruby-training/second/alpha-blog/vendor/bundle/ruby/3.1.0/gems/io-console-0.5.11/ext/io/console
+make DESTDIR\=
+compiling console.c
+linking shared-object io/console.bundle
+
+current directory: /Users/cristianramirez/Enroute/ruby-training/second/alpha-blog/vendor/bundle/ruby/3.1.0/gems/io-console-0.5.11/ext/io/console
+make DESTDIR\= install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 console.bundle ./.gem.20220228-71444-1x6aga/io

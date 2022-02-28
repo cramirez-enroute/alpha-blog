@@ -1,0 +1,16 @@
+current directory: /Users/cristianramirez/Enroute/ruby-training/second/alpha-blog/vendor/bundle/ruby/3.1.0/gems/debug-1.4.0/ext/debug
+/Users/cristianramirez/.rvm/rubies/ruby-3.1.0/bin/ruby -I /Users/cristianramirez/.rvm/rubies/ruby-3.1.0/lib/ruby/3.1.0 -r ./siteconf20220228-71444-zvgjfv.rb extconf.rb
+creating Makefile
+
+current directory: /Users/cristianramirez/Enroute/ruby-training/second/alpha-blog/vendor/bundle/ruby/3.1.0/gems/debug-1.4.0/ext/debug
+make DESTDIR\= clean
+
+current directory: /Users/cristianramirez/Enroute/ruby-training/second/alpha-blog/vendor/bundle/ruby/3.1.0/gems/debug-1.4.0/ext/debug
+make DESTDIR\=
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+
+current directory: /Users/cristianramirez/Enroute/ruby-training/second/alpha-blog/vendor/bundle/ruby/3.1.0/gems/debug-1.4.0/ext/debug
+make DESTDIR\= install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 debug.bundle ./.gem.20220228-71444-rayvp9/debug

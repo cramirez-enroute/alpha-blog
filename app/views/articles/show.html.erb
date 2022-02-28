@@ -1,0 +1,9 @@
+
+<p>#<%=@article.id %></p>
+<p> <b>Article title:</b> <%= @article.title %></p>
+<p> <b>Article description:</b> <%= @article.description %></p>
+
+<%= button_to "Show", { action: "show", id: @article.id }, { method: :get } %>
+<%= button_to "Delete", { action: "destroy", id: @article.id }, { method: :delete, data: { confirm: 'Are you sure?' } } %>
+<%= button_to "Edit", { action: "edit", id: @article.id }, { method: :get } %>
+<%= link_to "Back to articles", articles_path, :style => "display: block"  %>
