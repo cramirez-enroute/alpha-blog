@@ -1,7 +1,9 @@
 
-<p>#<%=@article.id %></p>
-<p> <b>Article title:</b> <%= @article.title %></p>
-<p> <b>Article description:</b> <%= @article.description %></p>
+<div class="article-card">
+  <p class="article-card-id">#<%=@article.id %></p>
+  <p class="article-card-title"> <b>Article title:</b> <%= @article.title %></p>
+  <p class="article-card-description"> <b>Article description:</b> <%= @article.description %></p>
+</div>
 
 <%= button_to "Show", { action: "show", id: @article.id }, { method: :get } %>
 <%= button_to "Delete", { action: "destroy", id: @article.id }, { method: :delete, data: { confirm: 'Are you sure?' } } %>

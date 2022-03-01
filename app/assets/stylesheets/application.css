@@ -30,15 +30,27 @@
 
 * {
     font-family: 'league-spartan';
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
 }
 
 *:focus,
 *:active {
     outline: none !important;
     -webkit-tap-highlight-color: transparent;
+}
+
+textarea {
+    resize: none;
+}
+
+a {
+    color: var(--secondary-color);
+}
+
+a:visited {
+    color: var(--custom-dark-gray);
 }
 
 .title {
@@ -243,4 +255,73 @@ nav .menu-items li a::before {
 nav .menu-items li a:hover::before {
     width: 100%;
     transition: all 0.5s ease-in-out;
+}
+
+/* Form Styles */
+
+.gc-form {
+    display: block;
+    margin: auto 0;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.gc-form-label {
+    margin: 0.5rem;
+}
+.gc-form .gc-form-input {
+    font-size: 1.7rem;
+    height: 3rem !important;
+    width: 15rem !important;
+    margin: 0.5rem !important;
+    border-width: 1px;
+    border-radius: 0.5rem;
+    border-color: var(--secondary-color);
+    padding: 0.5rem;
+}
+
+.gc-form .gc-form-input:focus {
+    border-color: var(--main-color);
+}
+
+.gc-form .gc-form-textarea {
+    font-size: 1.7rem;
+    height: 7rem;
+    width: 15rem;
+    margin: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    border-color: var(--secondary-color);
+    padding: 0.5rem;
+}
+
+.gc-form .gc-form-textarea:focus {
+    border-color: var(--main-color);
+}
+
+.gc-form .gc-form-button {
+    margin: 0 auto;
+    display: block;
+}
+
+/* Card Styles */
+
+.article-card {
+    margin: 2rem;
+    display: block;
+    padding: 2rem;
+    background-color: var(--custom-gray);
+    border-radius: 1rem;
+    box-shadow: 1px 4px 50px 21px rgba(0,0,0,0.08);
+    -webkit-box-shadow: 1px 4px 50px 21px rgba(0,0,0,0.08);
+}
+
+.article-card .article-card-id {
+    display: initial;
+    padding: 1rem;
+    font-size: 3rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 3rem;
+    background: var(--main-color);
 }

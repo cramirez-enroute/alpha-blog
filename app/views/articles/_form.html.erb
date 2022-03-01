@@ -8,17 +8,17 @@
   </ul>
 <% end %>
 
-<%= form_with(model: @article, local: true, class: 'form') do |f| %>
+<%= form_with(model: @article, local: true, class: 'gc-form') do |f| %>
   <p>
-    <%= f.label :title %> <br>
-    <%= f.text_field :title %>
+    <%= f.label :title, class: 'gc-form-label' %> <br>
+    <%= f.text_field :title, class: 'gc-form-input' %>
   </p>
   <p>
-    <%= f.label :description %> <br>
-    <%= f.text_area :description %>
+    <%= f.label :description, class: 'gc-form-label' %> <br>
+    <%= f.text_area :description, class: 'gc-form-textarea' %>
   </p>
   <p>
-    <%= f.submit class: 'gc-button' %>
+    <%= f.submit class: 'gc-button gc-form-button' %>
   </p>
 <% end %>
 
