@@ -79,6 +79,17 @@ h2{
 }
 
 /* Generic Custom Button */
+
+.gc-button-group {
+    display: flex;
+    justify-content:center;
+}
+
+.gc-button-group .gc-button {
+    margin: 1rem !important;
+
+}
+
 .gc-button {
     pointer-events: auto;
     cursor: pointer;

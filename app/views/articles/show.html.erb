@@ -5,7 +5,9 @@
   <p class="article-card-description"> <b>Article description:</b> <%= @article.description %></p>
 </div>
 
-<%= button_to "Show", { action: "show", id: @article.id }, { method: :get } %>
-<%= button_to "Delete", { action: "destroy", id: @article.id }, { method: :delete, data: { confirm: 'Are you sure?' } } %>
-<%= button_to "Edit", { action: "edit", id: @article.id }, { method: :get } %>
-<%= link_to "Back to articles", articles_path, :style => "display: block"  %>
+<div class="gc-button-group">
+  <%= button_to "Show", { action: "show", id: @article.id }, { method: :get, class: 'gc-button' } %>
+  <%= button_to "Delete", { action: "destroy", id: @article.id }, { method: :delete, class: 'gc-button', data: { confirm: 'Are you sure?' } } %>
+  <%= button_to "Edit", { action: "edit", id: @article.id }, { method: :get, class: 'gc-button' } %>
+</div>
+<%= link_to "Back to articles", articles_path  %>
