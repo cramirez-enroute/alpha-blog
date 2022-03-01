@@ -334,5 +334,26 @@ nav .menu-items li a:hover::before {
     width: 1rem;
     height: 1rem;
     border-radius: 3rem;
+    margin: auto;
     background: var(--main-color);
+}
+
+.article-card.article-card-title {
+    display: block;
+}
+
+.article-card.article-card-description {
+    display: block;
+}
+
+.article-card .article-card-username {
+    text-align: right;
+}
+
+.article-card .article-card-username div {
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: inline;
+    color: white;
 }
