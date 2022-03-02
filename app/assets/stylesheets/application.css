@@ -338,11 +338,11 @@ nav .menu-items li a:hover::before {
     background: var(--main-color);
 }
 
-.article-card.article-card-title {
+.article-card .article-card-title {
     display: block;
 }
 
-.article-card.article-card-description {
+.article-card .article-card-description {
     display: block;
 }
 
