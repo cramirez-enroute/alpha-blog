@@ -68,8 +68,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
-    autoprefixer-rails (10.4.2.0)
-      execjs (~> 2)
+    bcrypt (3.1.16)
     bootsnap (1.10.3)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -91,8 +90,6 @@ GEM
       reline (>= 0.2.7)
     digest (3.1.0)
     erubi (1.10.0)
-    execjs (2.8.1)
-    ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -198,7 +195,6 @@ GEM
       railties (>= 6.0.0)
     strscan (3.0.1)
     thor (1.2.1)
-    tilt (2.0.10)
     timeout (0.2.0)
     turbo-rails (1.0.1)
       actionpack (>= 6.0.0)
@@ -222,6 +218,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   byebug
   capybara
