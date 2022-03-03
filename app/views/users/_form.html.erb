@@ -1,0 +1,26 @@
+
+<%= render 'shared/errors', obj: @user %>>
+
+<%= form_with(model: @user, local: true, class: 'gc-form') do |f| %>
+  <p>
+    <%= f.label :username, class: 'gc-form-label' %> <br>
+    <%= f.text_field :username, class: 'gc-form-input', placeholder: 'Enter your new username' %>
+  </p>
+  <p>
+    <%= f.label :email, class: 'gc-form-label' %> <br>
+    <%= f.text_field :email, class: 'gc-form-input', placeholder: 'Enter your email' %>
+  </p>
+  <p>
+    <%= f.label :password, class: 'gc-form-label' %> <br>
+    <%= f.password_field :password, class: 'gc-form-input', placeholder: 'Enter your new password' %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, class: 'gc-form-label' %> <br>
+    <%= f.password_field :password_confirmation, class: 'gc-form-input', placeholder: 'Confirm your password' %>
+  </p>
+  <p>
+    <%= f.submit class: 'gc-button gc-form-button' %>
+  </p>
+<% end %>
+
+<br>
