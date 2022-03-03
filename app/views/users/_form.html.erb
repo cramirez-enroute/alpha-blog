@@ -1,14 +1,14 @@
 
-<%= render 'shared/errors', obj: @user %>>
+<%= render 'shared/errors', obj: @user %>
 
 <%= form_with(model: @user, local: true, class: 'gc-form') do |f| %>
   <p>
     <%= f.label :username, class: 'gc-form-label' %> <br>
-    <%= f.text_field :username, class: 'gc-form-input', placeholder: 'Enter your new username' %>
+    <%= f.text_field :username, class: 'gc-form-input', placeholder: 'Enter your new username', autocomplete: 'off' %>
   </p>
   <p>
     <%= f.label :email, class: 'gc-form-label' %> <br>
-    <%= f.text_field :email, class: 'gc-form-input', placeholder: 'Enter your email' %>
+    <%= f.text_field :email, class: 'gc-form-input', placeholder: 'Enter your email', autocomplete: 'off' %>
   </p>
   <p>
     <%= f.label :password, class: 'gc-form-label' %> <br>

@@ -285,15 +285,25 @@ nav .menu-items li a:hover::before {
     height: 3rem !important;
     width: 15rem !important;
     margin: 0.5rem !important;
+    text-align: center;
+    border-style: double;
     border-width: 1px;
     border-radius: 0.5rem;
     border-color: var(--secondary-color);
     padding: 0.5rem;
+
 }
 
 .gc-form .gc-form-input:focus {
     border-color: var(--main-color);
 }
+
+.gc-form .gc-form-input::-webkit-input-placeholder {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.gc-form .gc-form-input:c
 
 .gc-form .gc-form-textarea {
     font-size: 1.7rem;
