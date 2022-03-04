@@ -1,6 +1,9 @@
 <% if obj.errors.any? %>
-  <div class="alert alert-danger">
-    <h4 class="alert-heading">The following errors prevented the <%= obj.class.name.downcase %> from being <%= if obj.instance_of? User.class
+  <div id="gc-alert-error" class="gc-alert gc-alert-danger">
+    <button class="gc-close-button" onclick="getElementById('gc-alert-error').style.display='none'" >
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="gc-alert-heading">The following errors prevented the <%= obj.class.name.downcase %> from being <%= if obj.instance_of? User.class
                                                                                                                  "registered"
                                                                                                                else "saved"
                                                                                                                end%></h4>
@@ -9,8 +12,5 @@
         <li><%= msg %></li>
       <% end %>
     </ul>
-    <button class="gc-close-button">
-      <span aria-hidden="true">&times;</span>
-    </button>
   </div>
 <% end %>

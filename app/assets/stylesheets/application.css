@@ -19,6 +19,7 @@
     --secondary-color: #324960;
     --custom-gray: #F8F8F8;
     --custom-dark-gray: #8F8F8F;
+    --fancy-red: #FF8A80;
 }
 
 @font-face {
@@ -49,8 +50,13 @@ a {
     color: var(--secondary-color);
 }
 
+.secondary {
+    background: var(--secondary-color) !important;
+    color: var(--main-color) !important;
+}
+
 a:visited {
-    color: var(--custom-dark-gray);
+    color: var(--secondary-color);
 }
 
 .title {
@@ -87,7 +93,6 @@ h2{
 
 .gc-button-group .gc-button {
     margin: 1rem !important;
-
 }
 
 .gc-button {
@@ -102,6 +107,22 @@ h2{
     position: relative;
     display: block;
     margin: auto;
+    text-decoration: none;
+}
+
+.gc-button-link {
+    cursor: pointer;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+    background: var(--main-color);
+    padding: 0.8rem 1.1rem;
+    font-size: inherit;
+    position: relative;
+    display: block;
+    margin: 1rem auto;
+    text-decoration: none;
+    width: fit-content;
 }
 
 .gc-button:hover {
@@ -280,6 +301,7 @@ nav .menu-items li a:hover::before {
 .gc-form-label {
     margin: 0.5rem;
 }
+
 .gc-form .gc-form-input {
     font-size: 1.7rem;
     height: 3rem !important;
@@ -302,8 +324,6 @@ nav .menu-items li a:hover::before {
     font-size: 1rem;
     text-align: center;
 }
-
-.gc-form .gc-form-input:c
 
 .gc-form .gc-form-textarea {
     font-size: 1.7rem;
@@ -366,4 +386,39 @@ nav .menu-items li a:hover::before {
     border-radius: 0.5rem;
     display: inline;
     color: white;
+}
+
+/* Error card styles */
+.gc-alert {
+    margin: auto;
+    display: block;
+    border-radius: 2rem;
+    border-color: black;
+    align-items: center;
+    padding: 1rem;
+}
+
+.gc-alert-danger {
+    background-color: var(--fancy-red);
+}
+
+.gc-alert .gc-close-button {
+    display: block;
+    position: relative;
+    float: right;
+    font-size: 3rem;
+    background: none;
+    border: none;
+}
+
+.gc-alert .gc-close-button:hover {
+    color: var(--custom-gray);
+}
+
+/*
+Overriding ruby custom styles
+ */
+
+.field_with_errors > .gc-form-input, .field_with_errors > .gc-form-textarea {
+    border-color: var(--fancy-red);
 }
