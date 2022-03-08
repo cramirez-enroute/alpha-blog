@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efe39951-8455-4c01-9e61-44b38c6f6a00" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore.swp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ruby-version" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +46,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -244,6 +245,10 @@
       <workItem from="1646243458080" duration="29031000" />
       <workItem from="1646755106056" duration="698000" />
       <workItem from="1646757132722" duration="61000" />
+      <workItem from="1646757242329" duration="119000" />
+      <workItem from="1646757369780" duration="132000" />
+      <workItem from="1646757506443" duration="216000" />
+      <workItem from="1646757753307" duration="88000" />
     </task>
     <servers />
   </component>
