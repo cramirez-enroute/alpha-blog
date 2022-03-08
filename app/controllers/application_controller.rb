@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
 
-  UNPROCESSABLE_ENTITY = 422
+  UNPROCESSABLE_ENTITY_STATUS = 422
+  OK_STATUS = 200
 
   def hello
     render html: 'Hello world'

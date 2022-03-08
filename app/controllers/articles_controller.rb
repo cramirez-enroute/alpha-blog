@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
       flash[:notice] = "Article was created successfully"
       redirect_to article_path(@article)
     else
-      render action: 'new', status: 422
+      render action: 'new', status: UNPROCESSABLE_ENTITY_STATUS
     end
   end
 
@@ -39,7 +39,7 @@ class ArticlesController < ApplicationController
       flash[:notice] = "Article was updated successfully"
       redirect_to article_path(@article)
     else
-      render action: 'edit', status: 422
+      render action: 'edit', status: UNPROCESSABLE_ENTITY_STATUS
     end
   end
 
@@ -50,13 +50,14 @@ class ArticlesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_article
-      @article = Article.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def article_params
-      params.require(:article).permit(:title, :description)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_article
+    @article = Article.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def article_params
+    params.require(:article).permit(:title, :description)
+  end
 end
