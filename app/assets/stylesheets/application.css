@@ -20,6 +20,11 @@
     --custom-gray: #F8F8F8;
     --custom-dark-gray: #8F8F8F;
     --fancy-red: #FF8A80;
+    --fancy-dark-red: #C85A54;
+    --fancy-yellow: #FFF176;
+    --fancy-dark-yellow: #CABF45;
+    --fancy-green: #A5D6A7;
+    --fancy-dark-green: #75A478;
 }
 
 @font-face {
@@ -48,15 +53,20 @@ textarea {
 
 a {
     color: var(--secondary-color);
-}
-
-.secondary {
-    background: var(--secondary-color) !important;
-    color: var(--main-color) !important;
+    text-decoration: none;
 }
 
 a:visited {
     color: var(--secondary-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.secondary {
+    background: var(--secondary-color) !important;
+    color: white !important;
 }
 
 .title {
@@ -253,6 +263,11 @@ nav {
     padding: 1rem;
     width: 80%;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 1px 4px 50px 21px rgba(0,0,0,0.08);
+    -webkit-box-shadow: 1px 4px 50px 21px rgba(0,0,0,0.08);
 }
 nav .menu-items {
     list-style: none;
@@ -387,19 +402,65 @@ nav .menu-items li a:hover::before {
     display: inline;
     color: white;
 }
+/* User cards and profile Styles */
+
+.user-card-container {
+    margin: auto 5rem;
+    display: block;
+}
+
+.user-card-container .user-card {
+    margin: 5rem 10rem;
+    background: var(--custom-gray);
+    padding: 1rem;
+    border-radius: 3rem;
+    -webkit-box-shadow: 7px 7px 50px 19px rgba(0,0,0,0.23);
+    box-shadow: 7px 7px 50px 19px rgba(0,0,0,0.23);
+}
+
+.user-card-container .user-card .user-card-username {
+    text-align: center;
+}
+
+.user-card-container .user-card .user-card-articles-number {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+/* Show User styles */
+
+.profile-username {
+    text-align: center;
+}
+
+.profile-image {
+    display: block;
+    margin: auto;
+    border-radius: 3rem;
+}
 
 /* Error card styles */
 .gc-alert {
     margin: auto;
     display: block;
-    border-radius: 2rem;
-    border-color: black;
+    border-radius: 0.5rem;
     align-items: center;
-    padding: 1rem;
+    padding:1.5rem;
+}
+
+.gc-alert-success {
+    background-color: var(--fancy-green);
+    border-color: var(--fancy-dark-green);
 }
 
 .gc-alert-danger {
     background-color: var(--fancy-red);
+    border-color: var(--fancy-dark-red);
+}
+
+.gc-alert-warning {
+    background-color: var(--fancy-yellow);
+    border-color: var(--fancy-dark-yellow);
 }
 
 .gc-alert .gc-close-button {

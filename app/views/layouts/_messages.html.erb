@@ -1,10 +1,10 @@
 <div class="gc-messages-container">
   <% flash.each do |name, msg| %>
-    <div class="alert alert-success" role="alert">
-      <%= msg %>
-      <button class="gc-close-alert-button">
+    <div id="gc-alert-success" class="gc-alert gc-alert-success" role="alert">
+      <button class="gc-close-button" onclick="closeAlert('gc-alert-success')" >
         <span aria-hidden="true">&times;</span>
       </button>
+      <div class="gc-alert-text" ><%= msg %></div>
     </div>
   <% end %>
 </div>

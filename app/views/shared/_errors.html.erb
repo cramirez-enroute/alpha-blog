@@ -1,6 +1,6 @@
 <% if obj.errors.any? %>
   <div id="gc-alert-error" class="gc-alert gc-alert-danger">
-    <button class="gc-close-button" onclick="getElementById('gc-alert-error').style.display='none'" >
+    <button class="gc-close-button" onclick="closeAlert('gc-alert-error')" >
       <span aria-hidden="true">&times;</span>
     </button>
     <h4 class="gc-alert-heading">The following errors prevented the <%= obj.class.name.downcase %> from being <%= if obj.instance_of? User.class

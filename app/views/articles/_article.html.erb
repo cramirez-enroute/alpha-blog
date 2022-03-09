@@ -1,12 +1,34 @@
-<div id="<%= dom_id article %>">
-  <p>
-    <strong>Title:</strong>
-    <%= article.title %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= article.description %>
-  </p>
-
-</div>
+<% if !@articles.nil? && @articles.length > 0 %>
+  <table class="fl-table">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.description %></td>
+        <td>
+          <%= button_to "Show", { action: "show", id: article.id }, { method: :get, class: 'gc-button gc-icon-button' } %>
+        </td>
+        <td>
+          <%= button_to "Delete", { action: "destroy", id: article.id }, { method: :delete, class: 'gc-button gc-icon-button' } %>
+        </td>
+        <td>
+          <%= button_to "Edit", { action: "edit", id: article.id }, { method: :get, class: 'gc-button gc-icon-button' } %>
+        </td>
+      </tr>
+    <% end %>
+    <tbody>
+    </table>
+  <% else %>
+  <div class="gc-alert gc-alert-warning">
+    <div class="gc-alert-text">
+      There's no articles to show
+    </div>
+  </div>
+<%  end %>

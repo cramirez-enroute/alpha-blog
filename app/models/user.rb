@@ -14,11 +14,8 @@ class User < ApplicationRecord
   attr_accessor :password_confirmation
 
   validate :password_matches_password_confirmation
-  validates :password_confirmation, presence: true, length: { minimum: 8, maximum: 25 }
 
   def password_matches_password_confirmation
-    if :password.eql? :password_confirmation
-      errors.add :password_confirmation, "must match your password"
-    end
+    errors.add :password_confirmation, 'must match your password' if :password.eql? :password_confirmation
   end
 end
