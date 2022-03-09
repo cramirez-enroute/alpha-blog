@@ -170,6 +170,14 @@ h2{
     padding: 0.3rem;
 }
 
+.fl-table thead th:first-child {
+    border-radius: 0.3rem 0 0 0;
+}
+
+.fl-table thead th:last-child {
+    border-radius: 0 0.3rem 0 0;
+}
+
 .fl-table td {
     border-right: 0.04rem solid #f8f8f8;
 }
@@ -264,6 +272,7 @@ nav {
     width: 80%;
     text-align: center;
     position: sticky;
+    border-radius: 0.3rem;
     top: 0;
     z-index: 1;
     box-shadow: 1px 4px 50px 21px rgba(0,0,0,0.08);
@@ -474,6 +483,37 @@ nav .menu-items li a:hover::before {
 
 .gc-alert .gc-close-button:hover {
     color: var(--custom-gray);
+}
+
+/* Pagination styles */
+
+.pagination {
+    margin: 2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.pagination a, .pagination span, .pagination em {
+    padding: 1rem 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 0.3rem;
+    margin: 1rem;
+    -webkit-box-shadow: 2px -1px 43px 9px rgba(0,0,0,0.2);
+    box-shadow: 2px -1px 43px 9px rgba(0,0,0,0.2);
+}
+
+.pagination a:hover {
+    text-decoration: none;
+}
+
+.pagination em, .pagination span {
+    cursor: not-allowed;
+}
+
+.pagination .current {
+    background-color: var(--custom-gray);
+    color: var(--secondary-color);
 }
 
 /*

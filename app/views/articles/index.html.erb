@@ -2,8 +2,8 @@
   <h1>Articles</h1>
 </div>
 <div class="table-wrapper">
-  <%= will_paginate @articles %>
   <%= render 'article' %>
 </div>
+<%= will_paginate @articles %>
 
 <%= button_to "New article", { action: "new"}, { method: :get, class: 'gc-button' } %>
