@@ -41,6 +41,8 @@ gem "bootsnap", require: false
 
 require 'digest/md5'
 
+gem 'will_paginate', '~> 3.3'
+
 # Use Sass to process CSS
 #gem "sassc-rails"
 
