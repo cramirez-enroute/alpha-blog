@@ -1,0 +1,17 @@
+<div class="title">
+  <h1>Log in</h1>
+</div>
+
+<%= form_with(scope: :session, url: login_path, class: 'gc-form') do |f| %>
+  <p>
+    <%= f.label :email, class: 'gc-form-label' %> <br>
+    <%= f.text_field :email, class: 'gc-form-input', placeholder: 'Enter your email', autocomplete: 'off' %>
+  </p>
+  <p>
+    <%= f.label :password, class: 'gc-form-label' %> <br>
+    <%= f.password_field :password, class: 'gc-form-input', placeholder: 'Enter your new password' %>
+  </p>
+  <p>
+    <%= f.submit "Log in", class: 'gc-button gc-form-button' %>
+  </p>
+<% end %>
