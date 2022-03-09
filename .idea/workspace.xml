@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efe39951-8455-4c01-9e61-44b38c6f6a00" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/articles/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/index.html.erb" afterDir="false" />
-    </list>
+    <list default="true" id="efe39951-8455-4c01-9e61-44b38c6f6a00" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -266,7 +262,7 @@
       <workItem from="1646757369780" duration="132000" />
       <workItem from="1646757506443" duration="216000" />
       <workItem from="1646757753307" duration="88000" />
-      <workItem from="1646839613738" duration="11070000" />
+      <workItem from="1646839613738" duration="11431000" />
     </task>
     <servers />
   </component>
