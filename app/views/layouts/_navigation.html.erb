@@ -6,8 +6,13 @@
     <li>
       <%= link_to "Articles", articles_path, data: { item: 'Articles' } %>
     </li>
-    <li>
-      <%= link_to "Bloggers", users_path, data: { item: 'Bloggers' } %>
+    <li class="dropdown">
+      <a href="#" data-item="Bloggers">Bloggers</a>
+      <div class="dropdown-content">
+        <%= link_to "List", users_path, data: { item: 'List' } %> <br>
+        <%= link_to "Login", login_path, data: { item: 'Login' } %> <br>
+        <%= link_to "Register", signup_path, data: { item: 'Register' } %>
+      </div>
     </li>
     <li>
       <%= link_to "About", about_path, data: { item: 'About' } %>
