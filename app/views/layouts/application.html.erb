@@ -12,9 +12,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="d-flex flex-column">
+  <body>
     <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
     <%= yield %>
+    <footer>
+      <div>
+        <small>Copyright &copy;</small>
+      </div>
+    </footer>
   </body>
 </html>
