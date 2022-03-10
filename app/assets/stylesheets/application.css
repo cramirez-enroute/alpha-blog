@@ -450,7 +450,7 @@ nav .menu-items li a:hover::before {
 
 /* Error card styles */
 .gc-alert {
-    margin: auto;
+    margin: 1rem auto;
     display: block;
     border-radius: 0.5rem;
     align-items: center;
@@ -463,8 +463,8 @@ nav .menu-items li a:hover::before {
 }
 
 .gc-alert-danger {
-    background-color: var(--fancy-red);
-    border-color: var(--fancy-dark-red);
+    background-color: var(--fancy-red) !important;
+    border-color: var(--fancy-dark-red) !important;
 }
 
 .gc-alert-warning {
@@ -479,6 +479,7 @@ nav .menu-items li a:hover::before {
     font-size: 3rem;
     background: none;
     border: none;
+    padding-top: 0;
 }
 
 .gc-alert .gc-close-button:hover {
