@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user = User.first
     if @article.save
-      flash[:notice] = "Article was created successfully"
+      flash[:success] = "Article was created successfully"
       redirect_to article_path(@article)
     else
       render action: 'new', status: UNPROCESSABLE_ENTITY_STATUS
@@ -36,7 +36,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1 or /articles/1.json
   def update
     if @article.update(article_params)
-      flash[:notice] = "Article was updated successfully"
+      flash[:success] = "Article was updated successfully"
       redirect_to article_path(@article)
     else
       render action: 'edit', status: UNPROCESSABLE_ENTITY_STATUS

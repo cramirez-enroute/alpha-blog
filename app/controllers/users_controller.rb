@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      flash[:notice] = "Welcome to the Alpha blog. You've been succesfully signed up!"
+      flash[:success] = "Welcome to the Alpha blog. You've been succesfully signed up!"
       redirect_to articles_path
     else
       render 'new', status: UNPROCESSABLE_ENTITY_STATUS
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      flash[:notice] = 'Your account information was successfully updated'
+      flash[:success] = 'Your account information was successfully updated'
       redirect_to user_path
     else
       render 'edit', status: UNPROCESSABLE_ENTITY_STATUS
