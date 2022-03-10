@@ -1,7 +1,7 @@
 <div class="gc-messages-container">
   <% flash.each do |name, msg| %>
-    <div id="gc-alert-success" class="gc-alert gc-alert-success" role="alert">
-      <button class="gc-close-button" onclick="closeAlert('gc-alert-success')" >
+    <div id="gc-alert" class="gc-alert gc-alert-<%= name %>" role="alert">
+      <button class="gc-close-button" onclick="closeAlert('gc-alert')" >
         <span aria-hidden="true">&times;</span>
       </button>
       <div class="gc-alert-text" ><%= msg %></div>
