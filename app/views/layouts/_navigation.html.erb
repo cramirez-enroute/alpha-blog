@@ -10,13 +10,17 @@
       <a href="#" data-item="Bloggers">Bloggers</a>
       <div class="dropdown-content">
         <%= link_to "List", users_path, data: { item: 'List' } %> <br>
-        <%= link_to "Login", login_path, data: { item: 'Login' } %> <br>
-        <%= link_to "Logout", logout_path , data: { item: 'Logout', 'turbo-method': :delete } %> <br>
-        <%= link_to "Register", signup_path, data: { item: 'Register' } %>
+        <% if logged_in? %>
+          <%= link_to current_user.username, user_path(current_user) , data: { item: current_user.username } %> <br>
+          <%= link_to "Logout", logout_path , data: { item: 'Logout', 'turbo-method': :delete } %> <br>
+        <% else %>
+          <%= link_to "Login", login_path, data: { item: 'Login' } %> <br>
+          <%= link_to "Register", signup_path, data: { item: 'Register' } %> <br>
+        <% end %>
       </div>
     </li>
     <li>
-      <%= link_to "About", about_path, data: { item: 'About' } %>
+      <%= link_to "About", about_path, data: { item: 'About' } %> <br>
     </li>
   </ul>
 </nav>
