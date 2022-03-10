@@ -19,11 +19,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @articles = @user.articles.paginate(page: params[:page], per_page: ARTICLES_PAGINATION_LIMIT)
+    @articles = @user.articles.paginate(page: params[:page], per_page: ARTICLES_PAGINATION_LIMIT).order('id DESC')
   end
 
   def index
-    @users = User.paginate(page: params[:page], per_page: USERS_PAGINATION_LIMIT)
+    @users = User.paginate(page: params[:page], per_page: USERS_PAGINATION_LIMIT).order('id DESC')
   end
 
   def edit
