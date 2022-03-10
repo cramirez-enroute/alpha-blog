@@ -11,6 +11,7 @@
       <div class="dropdown-content">
         <%= link_to "List", users_path, data: { item: 'List' } %> <br>
         <%= link_to "Login", login_path, data: { item: 'Login' } %> <br>
+        <%= link_to "Logout", logout_path , data: { item: 'Logout', 'turbo-method': :delete } %> <br>
         <%= link_to "Register", signup_path, data: { item: 'Register' } %>
       </div>
     </li>
