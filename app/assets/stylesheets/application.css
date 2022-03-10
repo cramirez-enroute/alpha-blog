@@ -322,6 +322,8 @@ nav  .menu-items li.dropdown .dropdown-content {
     display: none;
     position: absolute;
     z-index: 20;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 nav  .menu-items li.dropdown:hover .dropdown-content {display: block;}
