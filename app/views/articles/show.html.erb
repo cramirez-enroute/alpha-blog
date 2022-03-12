@@ -3,12 +3,15 @@
   <p class="article-card-id">#<%=@article.id %></p>
   <p class="article-card-title"> <b>Article title:</b> <%= @article.title %></p>
   <p class="article-card-description"> <b>Article description:</b> <%= @article.description %></p>
-  <div class="article-card-username"> <div>by <%= @article.user.username %></div> </div>
+  <div class="article-card-username"> <div>by <%= link_to @article.user.username, @article.user  %></div> </div>
 </div>
 
 <div class="gc-button-group">
-  <%= button_to "Show", { action: "show", id: @article.id }, { method: :get, class: 'gc-button' } %>
-  <%= button_to "Delete", { action: "destroy", id: @article.id }, { method: :delete, class: 'gc-button', data: { confirm: 'Are you sure?' } } %>
-  <%= button_to "Edit", { action: "edit", id: @article.id }, { method: :get, class: 'gc-button' } %>
+  <% if logged_in? && @article.user == current_user %>
+    <%= button_to "Delete", { action: "destroy", id: @article.id }, { method: :delete, class: 'gc-button', data: { confirm: 'Are you sure?' } } %>
+    <%= button_to "Edit", { action: "edit", id: @article.id }, { method: :get, class: 'gc-button' } %>
+  <% end %>
 </div>
-<%= link_to "Back to articles", articles_path  %>
+<div class="gc-button-group">
+  <%= link_to "Back to articles", articles_path  %>
+</div>

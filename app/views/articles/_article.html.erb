@@ -15,12 +15,14 @@
         <td>
           <%= button_to "Show", { action: "show", id: article.id }, { method: :get, class: 'gc-button gc-icon-button' } %>
         </td>
-        <td>
-          <%= button_to "Delete", { action: "destroy", id: article.id }, { method: :delete, class: 'gc-button gc-icon-button' } %>
-        </td>
-        <td>
-          <%= button_to "Edit", { action: "edit", id: article.id }, { method: :get, class: 'gc-button gc-icon-button' } %>
-        </td>
+        <% if logged_in? && article.user == current_user %>
+          <td>
+            <%= button_to "Delete", { action: "destroy", id: article.id }, { method: :delete, class: 'gc-button gc-icon-button' } %>
+          </td>
+          <td>
+            <%= button_to "Edit", { action: "edit", id: article.id }, { method: :get, class: 'gc-button gc-icon-button' } %>
+          </td>
+        <% end %>
       </tr>
     <% end %>
     <tbody>

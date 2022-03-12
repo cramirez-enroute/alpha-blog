@@ -387,7 +387,8 @@ nav  .menu-items li.dropdown:hover .dropdown-content {display: block;}
 /* Card Styles */
 
 .article-card {
-    margin: 2rem;
+    margin: 3rem auto;
+    width: 90%;
     display: block;
     padding: 2rem;
     background-color: var(--custom-gray);
@@ -426,6 +427,16 @@ nav  .menu-items li.dropdown:hover .dropdown-content {display: block;}
     display: inline;
     color: white;
 }
+
+.article-card .article-card-username div a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.article-card .article-card-username div a:hover {
+    border-bottom: 0.125rem solid white;
+}
+
 /* User cards and profile Styles */
 
 .user-card-container {

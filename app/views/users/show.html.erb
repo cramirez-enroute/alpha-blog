@@ -2,14 +2,16 @@
 
 <%= gravatar_for @user, size: 200, class: 'profile-image' %>
 
-<div class="gc-button-group">
-  <%= button_to "Edit profile", { action: "edit", id: @user.id }, { method: :get, class: 'gc-button' } %>
-  <%= button_to "Delete", { action: "destroy", id: @user.id }, { method: :delete, class: 'gc-button secondary' } %>
-</div>
+<% if logged_in? && @user == current_user %>
+  <div class="gc-button-group">
+    <%= button_to "Edit profile", { action: "edit", id: @user.id }, { method: :get, class: 'gc-button' } %>
+    <%= button_to "Delete", { action: "destroy", id: @user.id }, { method: :delete, class: 'gc-button secondary' } %>
+  </div>
+<% end %>
 
 <h3 class="profile-username">Articles</h3>
 
-<%= render 'articles/article' %>
+<%= render 'articles/article', article: @user.articles %>
 
 <%= will_paginate @articles %>
 

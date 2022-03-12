@@ -6,4 +6,6 @@
 </div>
 <%= will_paginate @articles %>
 
-<%= button_to "New article", { action: "new"}, { method: :get, class: 'gc-button' } %>
+<% if logged_in? %>
+  <%= button_to "New article", { action: "new"}, { method: :get, class: 'gc-button' } %>
+<% end %>
