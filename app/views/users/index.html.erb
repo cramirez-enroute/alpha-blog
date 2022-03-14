@@ -9,14 +9,16 @@
         <%= link_to user.username, user_path(user), class: "" %>
       </h3>
       <div class="user-card-profile-picture">
-        <%= gravatar_for user, size: 200, class: "profile-image" %>
+        <%= gravatar_for user, size: 150, class: "profile-image" %>
       </div>
       <div class="user-card-articles-number">
         <%= pluralize user.articles.count, "article" %>
       </div>
       <div class="user-card-actions gc-button-group">
         <%= button_to "View profile", { action: "show", id: user.id }, { method: :get, class: 'gc-button' } %>
-        <%= button_to "Edit profile", { action: "edit", id: user.id }, { method: :get, class: 'gc-button secondary' } %>
+        <% if logged_in? && @user == current_user %>
+          <%= button_to "Edit profile", { action: "edit", id: user.id }, { method: :get, class: 'gc-button secondary' } %>
+        <% end %>
       </div>
     </div>
   </div>
