@@ -1,6 +1,8 @@
 # Users controller that handles all actions
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update]
+  before_action :require_user, only: %i[edit update]
+  before_action :require_same_user, only: %i[edit update]
 
   def new
     @user = User.new
@@ -47,5 +49,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:username, :email, :password, :password_confirmation)
+  end
+
+  def require_same_user
+    flash[:warning] = 'You can only edit your own account!' if current_user != @user
+    redirect_to current_user
   end
 end
