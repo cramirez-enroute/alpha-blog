@@ -268,8 +268,9 @@ h2{
 nav {
     margin: auto;
     background: #f9f9f9;
-    padding: 1rem;
+    padding: 0;
     width: 90%;
+    height: 8rem;
     text-align: center;
     position: sticky;
     border-radius: 0.3rem;
@@ -277,7 +278,14 @@ nav {
     z-index: 10;
     box-shadow: 1px 4px 50px 21px rgba(0,0,0,0.08);
     -webkit-box-shadow: 1px 4px 50px 21px rgba(0,0,0,0.08);
+    transition: padding 0.25s ease, height 1s ease-out;
 }
+
+nav:hover {
+    height: initial;
+    padding: 1rem;
+}
+
 nav .menu-items {
     list-style: none;
     padding: 0;
