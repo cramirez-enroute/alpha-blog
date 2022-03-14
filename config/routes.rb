@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root 'pages#home'
   get 'about', to: 'pages#about'
-  resources :articles, only: [:show, :index, :create, :destroy, :edit, :new, :update]
+  resources :articles, only: %i[show index create destroy edit new update]
   get 'signup', to: 'users#new'
-  resources :users, except: [:new]
+  resources :users, except: %i[new]
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
