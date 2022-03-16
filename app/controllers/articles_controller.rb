@@ -47,6 +47,7 @@ class ArticlesController < ApplicationController
 
   # DELETE /articles/1 or /articles/1.json
   def destroy
+    pp "ARTICULO ENCONTRADO: #{@article}"
     @article.destroy
     redirect_to articles_path
   end
@@ -60,7 +61,7 @@ class ArticlesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def article_params
-    params.require(:article).permit(:title, :description)
+    params.require(:article).permit(:id, :title, :description)
   end
 
   def require_same_user
