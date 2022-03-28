@@ -1,8 +1,9 @@
-<h1 class="profile-username"><%=@user.username %></h1>
+<h1 class="profile-username"><%= @user.username %></h1>
+<h2 class="profile-username-role"><%= "[ADMIN]" if current_user.admin? %></h2>
 
 <%= gravatar_for @user, size: 200, class: 'profile-image' %>
 
-<% if logged_in? && @user == current_user %>
+<% if logged_in? && (@user == current_user || current_user.admin? ) %>
   <div class="gc-button-group">
     <%= button_to "Edit profile", edit_user_path(@user), { method: :get, class: 'gc-button' } %>
     <%= button_to "Delete", user_path(@user), { method: :delete, class: 'gc-button secondary' } %>

@@ -7,7 +7,7 @@
 </div>
 
 <div class="gc-button-group">
-  <% if logged_in? && @article.user == current_user %>
+  <% if logged_in? && (@article.user == current_user || current_user.admin? ) %>
     <%= button_to "Delete", article_path(@article), { method: :delete, class: 'gc-button', data: { confirm: 'Are you sure?' } } %>
     <%= button_to "Edit", edit_article_path(@article), { method: :get, class: 'gc-button' } %>
   <% end %>

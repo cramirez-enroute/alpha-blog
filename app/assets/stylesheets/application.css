@@ -476,6 +476,12 @@ nav  .menu-items li.dropdown:hover .dropdown-content {display: block;}
     text-align: center;
 }
 
+.profile-username-role {
+    color: var(--secondary-color);
+    margin: 0 auto;
+    padding-top: 0;
+}
+
 .profile-image {
     display: block;
     margin: auto;
