@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
   get 'about', to: 'pages#about'
-  resources :articles, only: %i[show index create destroy edit new update]
+  resources :articles
   get 'signup', to: 'users#new'
   resources :users, except: %i[new]
   get 'login', to: 'sessions#new'

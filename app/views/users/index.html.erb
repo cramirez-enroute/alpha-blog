@@ -16,7 +16,7 @@
       </div>
       <div class="user-card-actions gc-button-group">
         <%= button_to "View profile", { action: "show", id: user.id }, { method: :get, class: 'gc-button' } %>
-        <% if logged_in? && @user == current_user %>
+        <% if logged_in? && user == current_user %>
           <%= button_to "Edit profile", { action: "edit", id: user.id }, { method: :get, class: 'gc-button secondary' } %>
         <% end %>
       </div>

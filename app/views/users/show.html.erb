@@ -4,8 +4,8 @@
 
 <% if logged_in? && @user == current_user %>
   <div class="gc-button-group">
-    <%= button_to "Edit profile", { action: "edit", id: @user.id }, { method: :get, class: 'gc-button' } %>
-    <%= button_to "Delete", { action: "destroy", id: @user.id }, { method: :delete, class: 'gc-button secondary' } %>
+    <%= button_to "Edit profile", edit_user_path(@user), { method: :get, class: 'gc-button' } %>
+    <%= button_to "Delete", user_path(@user), { method: :delete, class: 'gc-button secondary' } %>
   </div>
 <% end %>
 

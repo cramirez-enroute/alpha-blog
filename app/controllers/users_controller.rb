@@ -1,8 +1,8 @@
 # Users controller that handles all actions
 class UsersController < ApplicationController
-  before_action :set_user, only: %i[show edit update]
-  before_action :require_user, only: %i[edit update]
-  before_action :require_same_user, only: %i[edit update]
+  before_action :set_user, only: %i[show edit update destroy]
+  before_action :require_user, only: %i[show index edit update destroy]
+  before_action :require_same_user, only: %i[edit update destroy]
 
   def new
     @user = User.new
@@ -29,7 +29,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user
   end
 
   def update
@@ -39,6 +38,13 @@ class UsersController < ApplicationController
     else
       render 'edit', status: UNPROCESSABLE_ENTITY_STATUS
     end
+  end
+
+  def destroy
+    @user.destroy
+    session[:user_id] = nil
+    flash[:warning] = "Account and all associated articles has been succesfully deleted"
+    redirect_to articles_path
   end
 
   private
@@ -52,7 +58,9 @@ class UsersController < ApplicationController
   end
 
   def require_same_user
-    flash[:warning] = 'You can only edit your own account!' if current_user != @user
-    redirect_to current_user
+    if current_user != @user
+      flash[:warning] = 'You can only edit your own account!'
+      redirect_to user_path(@user)
+    end
   end
 end

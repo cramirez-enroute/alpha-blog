@@ -47,7 +47,6 @@ class ArticlesController < ApplicationController
 
   # DELETE /articles/1 or /articles/1.json
   def destroy
-    pp "ARTICULO ENCONTRADO: #{@article}"
     @article.destroy
     redirect_to articles_path
   end
@@ -65,7 +64,10 @@ class ArticlesController < ApplicationController
   end
 
   def require_same_user
-    flash[:warning] = 'You cannot edit this article because it is not yours!' if current_user != @article.user
-    redirect_to @article
+    if current_user != @article.user
+      flash[:warning] = 'You cannot edit this article because it is not yours!'
+      redirect_to @article
+    end
+
   end
 end

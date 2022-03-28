@@ -8,8 +8,8 @@
 
 <div class="gc-button-group">
   <% if logged_in? && @article.user == current_user %>
-    <%= button_to "Delete", { action: "destroy", id: @article.id, method: :delete }, { class: 'gc-button', data: { confirm: 'Are you sure?' } } %>
-    <%= button_to "Edit", { action: "edit", id: @article.id }, { method: :get, class: 'gc-button' } %>
+    <%= button_to "Delete", article_path(@article), { method: :delete, class: 'gc-button', data: { confirm: 'Are you sure?' } } %>
+    <%= button_to "Edit", edit_article_path(@article), { method: :get, class: 'gc-button' } %>
   <% end %>
 </div>
 <div class="gc-button-group">
